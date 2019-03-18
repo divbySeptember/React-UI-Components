@@ -1,1 +1,25 @@
 /* All styles for your header Components live here */
+
+
+.headerContainer{
+    display: flex;
+    
+}
+.logo{
+    padding: 5px 5px;
+    
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 0 5px;
+}
+.userTag{
+    font-size: .7rem;
+    color: rgb(154, 154, 154);
+}
+.leadText{
+    line-height: 25px;
+    padding: 0 5px 10px 5px;
+}
