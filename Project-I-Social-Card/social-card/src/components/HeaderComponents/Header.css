@@ -23,3 +23,12 @@
     line-height: 25px;
     padding: 0 5px 10px 5px;
 }
+
+
+ul{
+    align-items: center;
+    list-style-type: circle;
+    font-size: .7rem;
+    color: rgb(154, 154, 154);
+    padding-left: 30px;
+  }

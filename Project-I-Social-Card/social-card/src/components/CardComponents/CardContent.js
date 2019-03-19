@@ -10,7 +10,7 @@ const CardContent = () => {
                 Design simple views for each state in your application.
             </p>
            
-            <a href="http://reactjs.com" onClick={this.handleClick}>reactjs.com</a>
+            <a href="http://reactjs.com">reactjs.com</a>
         </div>
     )
 }
