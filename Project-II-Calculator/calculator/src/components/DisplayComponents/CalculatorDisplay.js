@@ -11,95 +11,61 @@ const NumberZ = {
   number: 0
 }
 
-const NumberOne = {
-  number: 1
-}
-
-const NumberTwo = {
-  number: 2
-}
-
-const NumberThree = {
-  number: 3
-}
-
-const NumberFour = {
-  number: 4
-}
-
-const NumberFive = {
-  number: 5
-}
-
-const NumberSix = {
-  number: 6
-}
-
-const NumberSeven = {
-  number: 7
-}
-
-const NumberEight = {
-  number: 8
-}
-
-const NumberNine = {
-  number: 9
-}
-
-const NumberDiv = {
-  action: '÷'
-}
-
-const NumberMult = {
-  action: 'x'
-}
-
-const NumberSub = {
-  action: '-'
-}
-
-const NumberPlus = {
-  action: '+'
-}
-
-const NumberEqual = {
-  action: '='
-}
-
 const DisplayClear = {
   clear: 'clear'
 }
 
+const NumberObj = [
+  { number: 1},
+  { number: 2},
+  { number: 3},
+  { number: 4},
+  { number: 5},
+  { number: 6},
+  { number: 7},
+  { number: 8},
+  { number: 9},
+ 
+];
+
+
+
+const ActionsObj = [
+  {action: '÷'}, 
+  {action: 'x'}, 
+  {action: '-'}, 
+  {action: '+'}, 
+  {action: '='} 
+];
 
 function CalculatorDisplay() {
+
+
+
   return (
-    <div className="display-full">
+    
+    <div className="display-full" >
       <div className="display-calc">0</div>
       <div className="button-display">
+
         <div className="number-display">
-          <ClearButton clear={DisplayClear}/>
-          <NumberButton number={NumberSeven}/>
-          <NumberButton number={NumberEight}/>
-          <NumberButton number={NumberNine}/>
-          <NumberButton number={NumberFour}/>
-          <NumberButton number={NumberFive}/>
-          <NumberButton number={NumberSix}/>
-          <NumberButton number={NumberOne}/>
-          <NumberButton number={NumberTwo}/>
-          <NumberButton number={NumberThree}/>
-          <NumberZero number={NumberZ}/>
+            <ClearButton clear={DisplayClear}  />
+            {NumberObj.map(NewNumber => (
+            <NumberButton number={NewNumber} />
+            ))}
+            <NumberZero number={NumberZ} />  
         </div>
-        <div className="action-display">
-          <ActionDisplay action={NumberDiv} />
-          <ActionDisplay action={NumberMult} />
-          <ActionDisplay action={NumberSub} />
-          <ActionDisplay action={NumberPlus} />
-          <ActionDisplay action={NumberEqual} />
+
+        <div className="action-display" >
+             {ActionsObj.map(NewAction => (
+            <ActionDisplay action={NewAction} />
+             ))}
         </div>
       </div>
     </div>
   );
+             
+  
 }
 
 export default CalculatorDisplay;
